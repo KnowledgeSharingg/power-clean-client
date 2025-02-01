@@ -38,22 +38,22 @@ export default function CreatePost() {
     e.preventDefault();
     const success = await createPost(form);
     if (success) {
-      alert("게시글이 등록되었습니다!");
+      alert("Post successfully created!");
       router.push("/");
     } else {
-      alert("등록에 실패했습니다.");
+      alert("Failed to create post.");
     }
   };
 
   return (
     <div className="container">
-      <h2>게시글 생성</h2>
+      <h2>Create a New Post</h2>
       <form onSubmit={handleSubmit} className="form">
         <div className="form-group">
           <input
             type="text"
             name="title"
-            placeholder="제목"
+            placeholder="Post Title"
             onChange={handleChange}
             required
           />
@@ -61,7 +61,7 @@ export default function CreatePost() {
         <div className="form-group">
           <textarea
             name="content"
-            placeholder="내용"
+            placeholder="Post Content"
             onChange={handleChange}
             required
           />
@@ -70,7 +70,7 @@ export default function CreatePost() {
           <input
             type="text"
             name="bookInfo.title"
-            placeholder="책 제목"
+            placeholder="Book Title"
             onChange={handleChange}
           />
         </div>
@@ -78,7 +78,7 @@ export default function CreatePost() {
           <input
             type="text"
             name="bookInfo.content"
-            placeholder="책 내용"
+            placeholder="Book Summary"
             onChange={handleChange}
           />
         </div>
@@ -86,12 +86,12 @@ export default function CreatePost() {
           <input
             type="text"
             name="bookInfo.link"
-            placeholder="책 링크"
+            placeholder="Book Link"
             onChange={handleChange}
           />
         </div>
         <button type="submit" className="btn">
-          게시
+          Submit
         </button>
       </form>
     </div>
