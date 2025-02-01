@@ -1,4 +1,4 @@
-"use client"; // Next.js의 Client Component
+"use client";
 
 import { useRouter } from "next/navigation";
 
@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <div className="container">
       <h1>📚 Power Clean</h1>
-      <p>책 정보를 공유하고 함께 토론하세요!</p>
+      <p>Share book information and engage in discussions!</p>
       <button className="btn" onClick={() => router.push("/create")}>
-        게시글 추가 ➕
+        Add Post ➕
       </button>
     </div>
   );
