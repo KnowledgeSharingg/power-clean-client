@@ -1,6 +1,8 @@
+const serverUrl = "http://18.205.151.65:8081";
+
 export async function createPost(data: any) {
   try {
-    const response = await fetch("http://18.205.151.65:8081/post", {
+    const response = await fetch(`${serverUrl}/post`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
