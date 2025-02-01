@@ -1,4 +1,4 @@
-"use client"; // Next.js의 Client Component
+"use client";
 
 import { useRouter } from "next/navigation";
 

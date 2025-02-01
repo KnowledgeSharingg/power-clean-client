@@ -1,3 +1,5 @@
+import "../styles/globals.css";
+
 export default function RootLayout({
   children,
 }: {
@@ -11,7 +13,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body>
-        <div className="container">{children}</div>
+        {children} {/* ✅ body 안에서 바로 렌더링 */}
       </body>
     </html>
   );
